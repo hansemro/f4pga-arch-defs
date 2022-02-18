@@ -521,6 +521,13 @@ PREFIX_REQUIRED = {
     "IBUFDS_GTE2": ("Y", 2),
     "IPAD": (None, None),
     "OPAD": (None, None),
+    "BSCAN": ("Y", 4),
+    "CAPTURE": (None, None),
+    "DCIRESET": (None, None),
+    "FRAME_ECC": (None, None),
+    "ICAP": ("Y", 2),
+    "STARTUP": (None, None),
+    "USR_ACCESS": (None, None),
 }
 
 

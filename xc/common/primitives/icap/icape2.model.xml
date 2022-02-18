@@ -1,0 +1,13 @@
+<models>
+  <model name="ICAPE2_VPR">
+    <input_ports>
+      <port name="CLK" is_clock="1"/>
+      <port name="CSIB"/>
+      <port name="I"/>
+      <port name="RDWRB"/>
+    </input_ports>
+    <output_ports>
+      <port name="O"/>
+    </output_ports>
+  </model>
+</models>

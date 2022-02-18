@@ -1,0 +1,19 @@
+<models>
+  <model name="BSCANE2_VPR">
+    <input_ports>
+      <port name="TDO"/>
+    </input_ports>
+    <output_ports>
+      <port name="CAPTURE"/>
+      <port name="DRCK"/>
+      <port name="RESET"/>
+      <port name="RUNTEST"/>
+      <port name="SEL"/>
+      <port name="SHIFT"/>
+      <port name="TCK"/>
+      <port name="TDI"/>
+      <port name="TMS"/>
+      <port name="UPDATE"/>
+    </output_ports>
+  </model>
+</models>

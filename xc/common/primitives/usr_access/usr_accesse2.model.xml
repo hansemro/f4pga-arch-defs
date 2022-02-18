@@ -1,0 +1,11 @@
+<models>
+  <model name="USR_ACCESSE2_VPR">
+    <input_ports>
+    </input_ports>
+    <output_ports>
+      <port name="CFGCLK"/>
+      <port name="DATA"/>
+      <port name="DATAVALID"/>
+    </output_ports>
+  </model>
+</models>

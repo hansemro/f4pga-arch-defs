@@ -1,0 +1,16 @@
+<models>
+  <model name="FRAME_ECCE2_VPR">
+    <input_ports>
+    </input_ports>
+    <output_ports>
+      <port name="CRCERROR"/>
+      <port name="ECCERROR"/>
+      <port name="ECCERRORSINGLE"/>
+      <port name="FAR"/>
+      <port name="SYNBIT"/>
+      <port name="SYNDROME"/>
+      <port name="SYNDROMEVALID"/>
+      <port name="SYNWORD"/>
+    </output_ports>
+  </model>
+</models>

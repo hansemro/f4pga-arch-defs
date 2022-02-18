@@ -1,0 +1,10 @@
+<models>
+  <model name="CAPTUREE2_VPR">
+    <input_ports>
+      <port name="CAP"/>
+      <port name="CLK" is_clock="1"/>
+    </input_ports>
+    <output_ports>
+    </output_ports>
+  </model>
+</models>

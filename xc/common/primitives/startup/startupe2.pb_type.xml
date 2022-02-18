@@ -1,0 +1,15 @@
+<pb_type name="STARTUPE2" num_pb="1" blif_model=".subckt STARTUPE2_VPR">
+  <output name="CFGCLK" num_pins="1"/>
+  <output name="CFGMCLK" num_pins="1"/>
+  <output name="EOS" num_pins="1"/>
+  <output name="PREQ" num_pins="1"/>
+  <clock name="CLK" num_pins="1"/>
+  <input name="GSR" num_pins="1"/>
+  <input name="GTS" num_pins="1"/>
+  <input name="KEYCLEARB" num_pins="1"/>
+  <input name="PACK" num_pins="1"/>
+  <clock name="USRCCLKO" num_pins="1"/>
+  <input name="USRCCLKTS" num_pins="1"/>
+  <input name="USRDONEO" num_pins="1"/>
+  <input name="USRDONETS" num_pins="1"/>
+</pb_type>

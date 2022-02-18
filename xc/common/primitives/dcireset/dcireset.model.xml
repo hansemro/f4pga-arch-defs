@@ -1,0 +1,10 @@
+<models>
+  <model name="DCIRESET_VPR">
+    <input_ports>
+      <port name="RST"/>
+    </input_ports>
+    <output_ports>
+      <port name="LOCKED"/>
+    </output_ports>
+  </model>
+</models>

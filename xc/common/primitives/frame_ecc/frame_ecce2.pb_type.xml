@@ -1,0 +1,10 @@
+<pb_type name="FRAME_ECCE2" num_pb="1" blif_model=".subckt FRAME_ECCE2_VPR">
+  <output name="CRCERROR" num_pins="1"/>
+  <output name="ECCERROR" num_pins="1"/>
+  <output name="ECCERRORSINGLE" num_pins="1"/>
+  <output name="FAR" num_pins="26"/>
+  <output name="SYNBIT" num_pins="5"/>
+  <output name="SYNDROME" num_pins="13"/>
+  <output name="SYNDROMEVALID" num_pins="1"/>
+  <output name="SYNWORD" num_pins="7"/>
+</pb_type>

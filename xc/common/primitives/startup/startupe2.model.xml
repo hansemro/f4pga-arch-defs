@@ -1,0 +1,21 @@
+<models>
+  <model name="STARTUPE2_VPR">
+    <input_ports>
+      <port name="CLK" is_clock="1"/>
+      <port name="GSR"/>
+      <port name="GTS"/>
+      <port name="KEYCLEARB"/>
+      <port name="PACK"/>
+      <port name="USRCCLKO" is_clock="1"/>
+      <port name="USRCCLKTS"/>
+      <port name="USRDONEO"/>
+      <port name="USRDONETS"/>
+    </input_ports>
+    <output_ports>
+      <port name="CFGCLK"/>
+      <port name="CFGMCLK"/>
+      <port name="EOS"/>
+      <port name="PREQ"/>
+    </output_ports>
+  </model>
+</models>

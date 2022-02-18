@@ -1,0 +1,18 @@
+<pb_type name="BSCANE2" num_pb="1" blif_model=".subckt BSCANE2_VPR">
+  <output name="CAPTURE" num_pins="1"/>
+  <output name="DRCK" num_pins="1"/>
+  <output name="RESET" num_pins="1"/>
+  <output name="RUNTEST" num_pins="1"/>
+  <output name="SEL" num_pins="1"/>
+  <output name="SHIFT" num_pins="1"/>
+  <output name="TCK" num_pins="1"/>
+  <output name="TDI" num_pins="1"/>
+  <output name="TMS" num_pins="1"/>
+  <output name="UPDATE" num_pins="1"/>
+  <input name="TDO" num_pins="1"/>
+  <metadata>
+    <meta name="fasm_params">
+      JTAG_CHAIN[3:0] = JTAG_CHAIN
+    </meta>
+  </metadata>
+</pb_type>
