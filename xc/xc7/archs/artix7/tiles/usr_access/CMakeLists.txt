@@ -1,0 +1,6 @@
+project_ray_tile(
+  ARCH artix7
+  TILE USR_ACCESS
+  SITE_TYPES USR_ACCESS/USR_ACCESSE2
+  SITE_AS_TILE
+  )

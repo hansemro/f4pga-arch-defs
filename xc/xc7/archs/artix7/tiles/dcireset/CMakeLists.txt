@@ -1,0 +1,6 @@
+project_ray_tile(
+  ARCH artix7
+  TILE DCIRESET
+  SITE_TYPES DCIRESET/DCIRESET
+  SITE_AS_TILE
+  )

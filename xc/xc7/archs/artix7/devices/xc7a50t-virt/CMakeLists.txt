@@ -6,6 +6,7 @@ add_xc_device_define_type(
     CLBLL_R
     CLBLM_L
     CLBLM_R
+    CFG_CENTER_MID
     BRAM_L
     LIOPAD_M
     LIOPAD_S
@@ -29,6 +30,13 @@ add_xc_device_define_type(
   PB_TYPES
     SLICEL
     SLICEM
+    BSCAN
+    CAPTURE
+    DCIRESET
+    FRAME_ECC
+    ICAP
+    STARTUP
+    USR_ACCESS
     BRAM_L
     IOPAD
     IOPAD_M
