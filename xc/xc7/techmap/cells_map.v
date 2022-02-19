@@ -10777,3 +10777,196 @@ module PCIE_2_1 (
     .USERRSTN(USERRSTN)
   );
 endmodule
+
+// ============================================================================
+// CFG_CENTER_MID
+
+module BSCANE2 (
+  output CAPTURE,
+  output DRCK,
+  output RESET,
+  output RUNTEST,
+  output SEL,
+  output SHIFT,
+  output TCK,
+  output TDI,
+  input TDO,
+  output TMS,
+  output UPDATE
+);
+  parameter integer JTAG_CHAIN = 1;
+
+  // Sanity check parameter
+  if (JTAG_CHAIN < 1 || JTAG_CHAIN > 4) begin
+    wire _TECHMAP_FAIL_;
+    $error("JTAG_CHAIN must be one of: 1, 2, 3, 4");
+  end
+
+  BSCANE2_VPR #(
+    .JTAG_CHAIN(JTAG_CHAIN)
+  ) _TECHMAP_REPLACE_ (
+    .CAPTURE(CAPTURE),
+    .DRCK(DRCK),
+    .RESET(RESET),
+    .RUNTEST(RUNTEST),
+    .SEL(SEL),
+    .SHIFT(SHIFT),
+    .TCK(TCK),
+    .TDI(TDI),
+    .TDO(TDO),
+    .TMS(TMS),
+    .UPDATE(UPDATE)
+  );
+endmodule
+
+module CAPTUREE2 (
+  input CAP,
+  input CLK
+);
+  parameter ONESHOT = "TRUE";
+  
+  // Sanity check parameter
+  if (ONESHOT != "TRUE" && ONESHOT != "FALSE") begin
+    wire _TECHMAP_FAIL_;
+    $error("ONESHOT must be either 'TRUE' or 'FALSE'");
+  end
+
+  CAPTUREE2_VPR #(
+    .ONESHOT(ONESHOT)
+  ) _TECHMAP_REPLACE_ (
+    .CAP(CAP),
+    .CLK(CLK)
+  );
+endmodule
+
+module DCIRESET (
+  output LOCKED,
+  input RST
+);
+
+  DCIRESET_VPR _TECHMAP_REPLACE_ (
+    .LOCKED(LOCKED),
+    .RST(RST)
+  );
+endmodule
+
+module FRAME_ECCE2 (
+  output CRCERROR,
+  output ECCERROR,
+  output ECCERRORSINGLE,
+  output [25:0] FAR,
+  output [4:0] SYNBIT,
+  output [12:0] SYNDROME,
+  output SYNDROMEVALID,
+  output [6:0] SYNWORD
+);
+  parameter FARSRC = "EFAR";
+  parameter FRAME_RBT_IN_FILENAME = "NONE";
+
+  // Sanity check parameter
+  if (FARSRC != "EFAR" && FARSRC != "FAR") begin
+    wire _TECHMAP_FAIL_;
+    $error("FARSRC must be either 'EFAR' or 'FAR'");
+  end
+
+  FRAME_ECCE2_VPR #(
+    .FARSRC(FARSRC),
+    .FRAME_RBT_IN_FILENAME(FRAME_RBT_IN_FILENAME)
+  ) _TECHMAP_REPLACE_ (
+    .CRCERROR(CRCERROR),
+    .ECCERROR(ECCERROR),
+    .ECCERRORSINGLE(ECCERRORSINGLE),
+    .FAR(FAR),
+    .SYNBIT(SYNBIT),
+    .SYNDROME(SYNDROME),
+    .SYNDROMEVALID(SYNDROMEVALID),
+    .SYNWORD(SYNWORD)
+  );
+endmodule
+
+module ICAPE2 (
+  input CLK,
+  input CSIB,
+  input [31:0] I,
+  output [31:0] O,
+  input RDWRB
+);
+  parameter [31:0] DEVICE_ID = 32'h3651093;
+  parameter ICAP_WIDTH = "X32";
+  parameter SIM_CFG_FILE_NAME ="NONE";
+
+  // Sanity check parameter
+  if (ICAP_WIDTH != "X32" && ICAP_WIDTH != "X8" && ICAP_WIDTH != "X16") begin
+    wire _TECHMAP_FAIL_;
+    $error("ICAP_WIDTH must be one of: 'X32', 'X8', 'X16'");
+  end
+
+  ICAPE2_VPR #(
+    .DEVICE_ID(DEVICE_ID),
+    .ICAP_WIDTH(ICAP_WIDTH),
+    .SIM_CFG_FILE_NAME(SIM_CFG_FILE_NAME)
+  ) _TECHMAP_REPLACE_ (
+    .CLK(CLK),
+    .CSIB(CSIB),
+    .I(I),
+    .O(O),
+    .RDWRB(RDWRB)
+  );
+endmodule
+
+module STARTUPE2 (
+  output CFGCLK,
+  output CFGMCLK,
+  input CLK,
+  output EOS,
+  input GSR,
+  input GTS,
+  input KEYCLEARB,
+  input PACK,
+  output PREQ,
+  input USRCCLKO,
+  input USRCCLKTS,
+  input USRDONEO,
+  input USRDONETS
+);
+  parameter PROG_USR = "FALSE";
+  parameter SIM_CCLK_FREQ = 0.0;
+
+  // Sanity check parameter
+  if (PROG_USR != "TRUE" && PROG_USR != "FALSE") begin
+    wire _TECHMAP_FAIL_;
+    $error("PROG_USR must be either 'TRUE' or 'FALSE'");
+  end
+
+  STARTUPE2_VPR #(
+    .PROG_USR(PROG_USR),
+    .SIM_CCLK_FREQ(SIM_CCLK_FREQ)
+  ) _TECHMAP_REPLACE_ (
+    .CFGCLK(CFGCLK),
+    .CFGMCLK(CFGMCLK),
+    .CLK(CLK),
+    .EOS(EOS),
+    .GSR(GSR),
+    .GTS(GTS),
+    .KEYCLEARB(KEYCLEARB),
+    .PACK(PACK),
+    .PREQ(PREQ),
+    .USRCCLKO(USRCCLKO),
+    .USRCCLKTS(USRCCLKTS),
+    .USRDONEO(USRDONEO),
+    .USRDONETS(USRDONETS)
+  );
+endmodule
+
+module USR_ACCESSE2 (
+  output CFGCLK,
+  output [31:0] DATA,
+  output DATAVALID
+);
+
+  USR_ACCESSE2_VPR _TECHMAP_REPLACE_ (
+    .CFGCLK(CFGCLK),
+    .DATA(DATA),
+    .DATAVALID(DATAVALID)
+  );
+endmodule
