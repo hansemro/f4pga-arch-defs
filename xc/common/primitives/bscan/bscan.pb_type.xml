@@ -1,4 +1,4 @@
-<pb_type name="BSCANE2" num_pb="1" blif_model=".subckt BSCANE2_VPR">
+<pb_type name="BSCAN" num_pb="1" blif_model=".subckt BSCAN_VPR">
   <output name="CAPTURE" num_pins="1"/>
   <output name="DRCK" num_pins="1"/>
   <output name="RESET" num_pins="1"/>

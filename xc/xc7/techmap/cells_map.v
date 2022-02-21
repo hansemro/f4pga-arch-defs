@@ -10781,7 +10781,7 @@ endmodule
 // ============================================================================
 // CFG_CENTER_MID
 
-module BSCANE2 (
+module BSCAN (
   output CAPTURE,
   output DRCK,
   output RESET,
@@ -10802,7 +10802,7 @@ module BSCANE2 (
     $error("JTAG_CHAIN must be one of: 1, 2, 3, 4");
   end
 
-  BSCANE2_VPR #(
+  BSCAN_VPR #(
     .JTAG_CHAIN(JTAG_CHAIN)
   ) _TECHMAP_REPLACE_ (
     .CAPTURE(CAPTURE),
@@ -10819,7 +10819,7 @@ module BSCANE2 (
   );
 endmodule
 
-module CAPTUREE2 (
+module CAPTURE (
   input CAP,
   input CLK
 );
@@ -10831,7 +10831,7 @@ module CAPTUREE2 (
     $error("ONESHOT must be either 'TRUE' or 'FALSE'");
   end
 
-  CAPTUREE2_VPR #(
+  CAPTURE_VPR #(
     .ONESHOT(ONESHOT)
   ) _TECHMAP_REPLACE_ (
     .CAP(CAP),
@@ -10850,7 +10850,7 @@ module DCIRESET (
   );
 endmodule
 
-module FRAME_ECCE2 (
+module FRAME_ECC (
   output CRCERROR,
   output ECCERROR,
   output ECCERRORSINGLE,
@@ -10869,7 +10869,7 @@ module FRAME_ECCE2 (
     $error("FARSRC must be either 'EFAR' or 'FAR'");
   end
 
-  FRAME_ECCE2_VPR #(
+  FRAME_ECC_VPR #(
     .FARSRC(FARSRC),
     .FRAME_RBT_IN_FILENAME(FRAME_RBT_IN_FILENAME)
   ) _TECHMAP_REPLACE_ (
@@ -10884,7 +10884,7 @@ module FRAME_ECCE2 (
   );
 endmodule
 
-module ICAPE2 (
+module ICAP (
   input CLK,
   input CSIB,
   input [31:0] I,
@@ -10901,7 +10901,7 @@ module ICAPE2 (
     $error("ICAP_WIDTH must be one of: 'X32', 'X8', 'X16'");
   end
 
-  ICAPE2_VPR #(
+  ICAP_VPR #(
     .DEVICE_ID(DEVICE_ID),
     .ICAP_WIDTH(ICAP_WIDTH),
     .SIM_CFG_FILE_NAME(SIM_CFG_FILE_NAME)
@@ -10914,7 +10914,7 @@ module ICAPE2 (
   );
 endmodule
 
-module STARTUPE2 (
+module STARTUP (
   output CFGCLK,
   output CFGMCLK,
   input CLK,
@@ -10938,7 +10938,7 @@ module STARTUPE2 (
     $error("PROG_USR must be either 'TRUE' or 'FALSE'");
   end
 
-  STARTUPE2_VPR #(
+  STARTUP_VPR #(
     .PROG_USR(PROG_USR),
     .SIM_CCLK_FREQ(SIM_CCLK_FREQ)
   ) _TECHMAP_REPLACE_ (
@@ -10958,13 +10958,13 @@ module STARTUPE2 (
   );
 endmodule
 
-module USR_ACCESSE2 (
+module USR_ACCESS (
   output CFGCLK,
   output [31:0] DATA,
   output DATAVALID
 );
 
-  USR_ACCESSE2_VPR _TECHMAP_REPLACE_ (
+  USR_ACCESS_VPR _TECHMAP_REPLACE_ (
     .CFGCLK(CFGCLK),
     .DATA(DATA),
     .DATAVALID(DATAVALID)

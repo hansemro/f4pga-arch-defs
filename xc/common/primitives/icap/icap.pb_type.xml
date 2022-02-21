@@ -1,4 +1,4 @@
-<pb_type name="ICAPE2" num_pb="1" blif_model=".subckt ICAPE2_VPR">
+<pb_type name="ICAP" num_pb="1" blif_model=".subckt ICAP_VPR">
   <output name="O" num_pins="32"/>
   <clock name="CLK" num_pins="1"/>
   <input name="CSIB" num_pins="1"/>

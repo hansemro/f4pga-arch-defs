@@ -1,5 +1,5 @@
 <models>
-  <model name="FRAME_ECCE2_VPR">
+  <model name="FRAME_ECC_VPR">
     <input_ports>
     </input_ports>
     <output_ports>

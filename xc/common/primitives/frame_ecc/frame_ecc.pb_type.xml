@@ -1,4 +1,4 @@
-<pb_type name="FRAME_ECCE2" num_pb="1" blif_model=".subckt FRAME_ECCE2_VPR">
+<pb_type name="FRAME_ECC" num_pb="1" blif_model=".subckt FRAME_ECC_VPR">
   <output name="CRCERROR" num_pins="1"/>
   <output name="ECCERROR" num_pins="1"/>
   <output name="ECCERRORSINGLE" num_pins="1"/>

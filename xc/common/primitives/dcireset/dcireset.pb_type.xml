@@ -1,9 +1,4 @@
 <pb_type name="DCIRESET" num_pb="1" blif_model=".subckt DCIRESET_VPR">
   <output name="LOCKED" num_pins="1"/>
   <input name="RST" num_pins="1"/>
-  <metadata>
-    <meta name="fasm_features">
-      IN_USE
-    </meta>
-  </metadata>
 </pb_type>

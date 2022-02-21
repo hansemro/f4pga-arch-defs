@@ -1,10 +1,13 @@
 <models>
-  <model name="CAPTUREE2_VPR">
+  <model name="ICAP_VPR">
     <input_ports>
-      <port name="CAP"/>
       <port name="CLK" is_clock="1"/>
+      <port name="CSIB"/>
+      <port name="I"/>
+      <port name="RDWRB"/>
     </input_ports>
     <output_ports>
+      <port name="O"/>
     </output_ports>
   </model>
 </models>

@@ -1,5 +1,5 @@
 <models>
-  <model name="STARTUPE2_VPR">
+  <model name="STARTUP_VPR">
     <input_ports>
       <port name="CLK" is_clock="1"/>
       <port name="GSR"/>

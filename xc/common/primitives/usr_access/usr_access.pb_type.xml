@@ -1,4 +1,4 @@
-<pb_type name="USR_ACCESSE2" num_pb="1" blif_model=".subckt USR_ACCESSE2_VPR">
+<pb_type name="USR_ACCESS" num_pb="1" blif_model=".subckt USR_ACCESS_VPR">
   <output name="CFGCLK" num_pins="1"/>
   <output name="DATA" num_pins="32"/>
   <output name="DATAVALID" num_pins="1"/>

@@ -3580,7 +3580,7 @@ endmodule
 // CFG_CENTER_MID
 
 (* blackbox *)
-module BSCANE2_VPR (
+module BSCAN_VPR (
   output CAPTURE,
   output DRCK,
   output RESET,
@@ -3597,7 +3597,7 @@ module BSCANE2_VPR (
 endmodule
 
 (* blackbox *)
-module CAPTUREE2_VPR (
+module CAPTURE_VPR (
   input CAP,
   input CLK
 );
@@ -3612,7 +3612,7 @@ module DCIRESET_VPR (
 endmodule
 
 (* blackbox *)
-module FRAME_ECCE2_VPR (
+module FRAME_ECC_VPR (
   output CRCERROR,
   output ECCERROR,
   output ECCERRORSINGLE,
@@ -3627,7 +3627,7 @@ module FRAME_ECCE2_VPR (
 endmodule
 
 (* blackbox *)
-module ICAPE2_VPR (
+module ICAP_VPR (
   input CLK,
   input CSIB,
   input [31:0] I,
@@ -3640,7 +3640,7 @@ module ICAPE2_VPR (
 endmodule
 
 (* blackbox *)
-module STARTUPE2_VPR (
+module STARTUP_VPR (
   output CFGCLK,
   output CFGMCLK,
   input CLK,
@@ -3660,7 +3660,7 @@ module STARTUPE2_VPR (
 endmodule
 
 (* blackbox *)
-module USR_ACCESSE2_VPR (
+module USR_ACCESS_VPR (
   output CFGCLK,
   output [31:0] DATA,
   output DATAVALID

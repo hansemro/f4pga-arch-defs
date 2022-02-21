@@ -1,5 +1,5 @@
 <models>
-  <model name="BSCANE2_VPR">
+  <model name="BSCAN_VPR">
     <input_ports>
       <port name="TDO"/>
     </input_ports>
