@@ -1,6 +1,0 @@
-project_ray_tile(
-  ARCH artix7
-  TILE STARTUP
-  SITE_TYPES STARTUP/STARTUP
-  SITE_AS_TILE
-  )

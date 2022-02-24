@@ -1,6 +1,0 @@
-project_ray_tile(
-  ARCH artix7
-  TILE FRAME_ECC
-  SITE_TYPES FRAME_ECC/FRAME_ECC
-  SITE_AS_TILE
-  )

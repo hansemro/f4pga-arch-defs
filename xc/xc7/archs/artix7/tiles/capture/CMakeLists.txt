@@ -1,6 +1,0 @@
-project_ray_tile(
-  ARCH artix7
-  TILE CAPTURE
-  SITE_TYPES CAPTURE/CAPTURE
-  SITE_AS_TILE
-  )

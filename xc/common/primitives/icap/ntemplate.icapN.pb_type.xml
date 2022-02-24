@@ -1,0 +1,37 @@
+<pb_type name="ICAP{N}" num_pb="1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <output name="O" num_pins="32"/>
+  <clock name="CLK" num_pins="1"/>
+  <input name="CSIB" num_pins="1"/>
+  <input name="I" num_pins="32"/>
+  <input name="RDWRB" num_pins="1"/>
+  <mode name="EMPTY">
+    <pb_type name="empty" blif_model=".latch" num_pb="1" />
+    <interconnect />
+  </mode>
+  <mode name="ICAP">
+    <pb_type name="ICAP_VPR" blif_model=".subckt ICAP_VPR" num_pb="1">
+      <output name="O" num_pins="32"/>
+      <clock name="CLK" num_pins="1"/>
+      <input name="CSIB" num_pins="1"/>
+      <input name="I" num_pins="32"/>
+      <input name="RDWRB" num_pins="1"/>
+      <metadata>
+        <meta name="fasm_params">
+          DEVICE_ID[31:0] = DEVICE_ID
+        </meta>
+      </metadata>
+    </pb_type>
+    <interconnect>
+      <direct name="O" input="ICAP_VPR.O" output="ICAP{N}.O"/>
+      <direct name="CLK" input="ICAP{N}.CLK" output="ICAP_VPR.CLK"/>
+      <direct name="CSIB" input="ICAP{N}.CSIB" output="ICAP_VPR.CSIB"/>
+      <direct name="I" input="ICAP{N}.I" output="ICAP_VPR.I"/>
+      <direct name="RDWRB" input="ICAP{N}.RDWRB" output="ICAP_VPR.RDWRB"/>
+    </interconnect>
+    <metadata>
+      <meta name="fasm_features">
+        IN_USE
+      </meta>
+    </metadata>
+  </mode>
+</pb_type>

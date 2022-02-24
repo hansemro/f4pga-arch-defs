@@ -1,0 +1,55 @@
+<pb_type name="BSCAN{N}" num_pb="1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <output name="CAPTURE" num_pins="1"/>
+  <output name="DRCK" num_pins="1"/>
+  <output name="RESET" num_pins="1"/>
+  <output name="RUNTEST" num_pins="1"/>
+  <output name="SEL" num_pins="1"/>
+  <output name="SHIFT" num_pins="1"/>
+  <output name="TCK" num_pins="1"/>
+  <output name="TDI" num_pins="1"/>
+  <output name="TMS" num_pins="1"/>
+  <output name="UPDATE" num_pins="1"/>
+  <input name="TDO" num_pins="1"/>
+  <mode name="EMPTY">
+    <pb_type name="empty" blif_model=".latch" num_pb="1" />
+    <interconnect />
+  </mode>
+  <mode name="BSCAN">
+    <pb_type name="BSCAN_VPR" blif_model=".subckt BSCAN_VPR" num_pb="1">
+      <output name="CAPTURE" num_pins="1"/>
+      <output name="DRCK" num_pins="1"/>
+      <output name="RESET" num_pins="1"/>
+      <output name="RUNTEST" num_pins="1"/>
+      <output name="SEL" num_pins="1"/>
+      <output name="SHIFT" num_pins="1"/>
+      <output name="TCK" num_pins="1"/>
+      <output name="TDI" num_pins="1"/>
+      <output name="TMS" num_pins="1"/>
+      <output name="UPDATE" num_pins="1"/>
+      <input name="TDO" num_pins="1"/>
+      <metadata>
+        <meta name="fasm_params">
+          JTAG_CHAIN[3:0] = JTAG_CHAIN
+        </meta>
+      </metadata>
+    </pb_type>
+    <interconnect>
+      <direct name="CAPTURE" input="BSCAN_VPR.CAPTURE" output="BSCAN{N}.CAPTURE"/>
+      <direct name="DRCK" input="BSCAN_VPR.DRCK" output="BSCAN{N}.DRCK"/>
+      <direct name="RESET" input="BSCAN_VPR.RESET" output="BSCAN{N}.RESET"/>
+      <direct name="RUNTEST" input="BSCAN_VPR.RUNTEST" output="BSCAN{N}.RUNTEST"/>
+      <direct name="SEL" input="BSCAN_VPR.SEL" output="BSCAN{N}.SEL"/>
+      <direct name="SHIFT" input="BSCAN_VPR.SHIFT" output="BSCAN{N}.SHIFT"/>
+      <direct name="TCK" input="BSCAN_VPR.TCK" output="BSCAN{N}.TCK"/>
+      <direct name="TDI" input="BSCAN_VPR.TDI" output="BSCAN{N}.TDI"/>
+      <direct name="TMS" input="BSCAN_VPR.TMS" output="BSCAN{N}.TMS"/>
+      <direct name="UPDATE" input="BSCAN_VPR.UPDATE" output="BSCAN{N}.UPDATE"/>
+      <direct name="TDO" input="BSCAN{N}.TDO" output="BSCAN_VPR.TDO"/>
+    </interconnect>
+    <metadata>
+      <meta name="fasm_features">
+        IN_USE
+      </meta>
+    </metadata>
+  </mode>
+</pb_type>
